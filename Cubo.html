@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retângulo</title>
+
+    <!-- Import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/cubo.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><img src="assets/img/DxForms.jpeg" alt="DxForms" ></div>
+        <div class="box">
+            <button><a href="index.html">Pagina inicial</a></button>
+            <button><a href="Retangulo.html">Retangulo</a></button>
+            <button><a href="Cubóide.html">Cuboide</a></button>
+            <button><a href="Quadrado.html">Quadrado</a></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Calculo de área e perímetro do Cubo</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="base">Base</label>
+                        <input type="text" name="base" id="base" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=" altura">Altura</label>
+                        <input type="text" name="altura" id="altura" class="form-control">
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <h4>Calculo de área e perímetro do cubo</h4>
+                        <button type="submit" id="submit" class="btn btn-primary">Calcular</button>
+
+                        <button id="exemplo" onclick="exemplo()" class="btn btn-primary">
+                            Disparar Função Exemplo
+                        </button>
+                    </div>
+                    <div class="form-group mt-2">
+                        <h4>Calculo do area do cubo</h4>
+                        <label for="area">Área</label>
+                        <input type="text" name="area" id="area" class="form-control" disabled>
+                        <p id="resultado"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/img/cubo.jpeg" alt="img" width="300px" height="300px">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Calculo do perímetro do cubo</h4>
+                        <form>
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="perimetro">Perimetro</label>
+                    <input type="text" name="perimetro" id="perimetro" class="form-control" disabled>
+                    <p id="resultado2"></p>
+                </div>
+                </form>
+            </div>
+
+        </div>
+
+        <h1>Propriedades Básicas do Cubo:</h1>
+
+
+        <p>
+            <strong>Lados do Cubo:</strong>
+            Um cubo tem 6 faces, todas elas são quadrados iguais. Portanto, um cubo tem 12 arestas e 8 vértices.
+            <br>
+            <strong>Ângulos do Cubo:</strong>
+
+            Ângulos internos de um cubo são todos de 90 graus, pois todas as suas faces são quadradas.
+            Ângulos entre as diagonais de uma face são de 90 graus.
+            Ângulos entre arestas adjacentes são de 90 graus.
+            <br>
+            Diagonais do Cubo:
+            Ângulos internos de um cubo são todos de 90 graus, pois todas as suas faces são quadradas.
+Ângulos entre as diagonais de uma face são de 90 graus.
+Ângulos entre arestas adjacentes são de 90 graus.
+            <br>
+            <strong>Área do Cubo:</strong>
+            Uma diagonal de uma face é a diagonal de um quadrado, calculada como raiz quadrada de 2 vezes o lado.
+            A diagonal do cubo (que conecta dois vértices opostos) é calculada como raiz quadrada 3 vezes o lado.
+            <br>
+            <strong>Aplicações do Cubo:</strong>
+
+           <strong> Em Geometria:</strong> O cubo é um sólido de fácil visualização e é usado em muitos problemas geométricos e de
+            volume.
+            <br>
+            <strong>Em Design Gráfico e Arte:</strong> Formas de cubos são frequentemente usadas em arte abstrata e design de objetos
+            tridimensionais.
+            <br>
+            <strong>Em Cálculos em Ciência e Tecnologia: </strong>O cubo é usado em muitos cálculos relacionados a volumes, como na
+            engenharia para determinar capacidades de recipientes cúbicos.
+        </p>
+
+
+
+
+
+
+
+        <h2>Não pare por ai, que tal experimentar novas formas?</h2>
+
+        <div class="caixaBotões">
+            <button><a href="Retangulo.html">retangulo</a></button> <button><a href="circulo.html">circulo</a></button> <button><a href="Romboedro.html">Romboedro</a></button>
+
+            <button><a href="PolígonoRegular.html">Polígono Regular</a> </button> <button><a href="TrapezoideIrregular.html"> Trapezoide Irregular</a></button> <button><a href="Quadrado.html">Quadrado</a></button>
+            <button><a href="Cubóide.html">Cubóide</a></button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        // Exemplo de função em javascript chamada por um evento
+        document.getElementById('submit').addEventListener('click', function (event) {
+            event.preventDefault();
+            calcularAreaRetangulo();
+            calcularPerimetroCubo();
+        });
+
+        // Exemplo de função em javascript
+        function exemplo() {
+            alert("Essa função foi chamada pelo botão")
+        }
+
+        // Função para calcular a área do retângulo
+        function calcularAreaRetangulo() {
+            let base = document.getElementById('base').value;
+            let altura = document.getElementById('altura').value;
+            let area = (base * altura) * 6;
+            document.getElementById('area').value = area;
+            document.getElementById('resultado').innerText = `A área do retângulo é ${area}`;
+        }
+
+        function calcularPerimetroCubo() {
+            let base = document.getElementById('base').value;
+            let altura = document.getElementById('altura').value;
+            let perimetro = altura * 12
+            document.getElementById('perimetro').value = perimetro;
+            document.getElementById('resultado2').innerText = `O perímetro do Retangulo é ${perimetro}`;
+        }
+
+        //Exemplo de evento em javascript disparado por pressionar a tecla ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                alert('Você pressionou a tecla ESC');
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.keyCode === 50) {
+                alert('Você pressionou a tecla 2');
+            }
+        });
+
+        //Exemplo de evento em javascript disparado por pressionar a tecla ENTER em um campo de texto
+        document.getElementById('base').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                alert('Você pressionou a tecla ENTER no campo base');
+            }
+        });
+
+        // Exemplo de evento em javascript disparado por passar o mouse sobre um elemento
+        document.getElementById('base').addEventListener('mouseover', function () {
+            console.log('Você passou o mouse sobre o campo base');
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romboedro</title>
+
+    <!-- Import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/romboedro.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><img src="assets/img/DxForms.jpeg" alt="DxForms" ></div>
+        <div class="box">
+            <button><a href="index.html">Pagina inicial</a></button>
+            <button><a href="Retangulo.html">Retangulo</a></button>
+            <button><a href="Cubóide.html">Cuboide</a></button>
+            <button><a href="Quadrado.html">Quadrado</a></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Calculo de área e perímetro do Romboedro</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="DiametroMaior">Diametro maior</label>
+                        <input type="text" name="DiametroMaior" id="DiametroMaior" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for=" DiametroMenor">Diametro menor</label>
+                        <input type="text" name="DiametroMenor" id="DiametroMenor" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for=" altura">Altura</label>
+                        <input type="text" name="altura" id="altura" class="form-control">
+                    </div>
+
+                    <div class="form-group mt-2">
+
+                        <button type="submit" id="submit" class="btn btn-primary">Calcular</button>
+
+                        <button id="exemplo" onclick="exemplo()" class="btn btn-primary">
+                            Disparar Função Exemplo
+                        </button>
+                    </div>
+
+                    <div class="form-group mt-2">
+                        <h4>Calculo da area do romboedro</h4>
+                        <label for="area">Área</label>
+                        <input type="text" name="area" id="area" class="form-control" disabled>
+                        <p id="resultado"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/img/romboedro.jpg" alt="img" width="300px" height="300px">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Calculo do perímetro do Romboedro</h3>
+                        <form>
+
+                </div>
+                <div class="form-group mt-2">
+                    <label for="perimetro">Perimetro</label>
+                    <input type="text" name="perimetro" id="perimetro" class="form-control" disabled>
+                    <p id="resultado2"></p>
+                </div>
+                </form>
+            </div>
+
+        </div>
+
+        <h1>Propriedades Básicas do Retângulo:</h1>
+
+
+        <p>
+            <strong>Lados do Romboedro:</strong> Um romboedro tem 6 faces, todas elas são rombos iguais. Portanto, um
+            romboedro tem 12
+            arestas e 8 vértices. <br> <br>
+            <strong>Ângulos do Romboedro:</strong> Ângulos internos de um romboedro podem variar dependendo das
+            proporções do rombo. Por
+            exemplo, se os ângulos internos do rombo forem todos de 90 graus, então os ângulos internos do romboedro
+            também serão de 90 graus. <br> <br>
+            <strong> Diagonais do Romboedro:</strong> As diagonais de um romboedro conectam vértices opostos não
+            adjacentes, formando dois
+            triângulos equiláteros. As diagonais de uma face do romboedro são iguais aos lados do rombo. <br> <br>
+            <strong>Área do Romboedro:</strong> A área de cada face do romboedro é calculada como base vezes altura,
+            onde a base é um dos
+            lados do rombo e a altura é a altura perpendicular à base. A área total do romboedro é a soma das áreas de
+            suas seis faces. <br> <br>
+            <strong>Aplicações do Romboedro:</strong> Em Geometria: O romboedro é usado para explorar propriedades
+            geométricas
+            tridimensionais, como áreas de faces e volumes. <br> <br>
+            <strong>Em Design Gráfico e Arte:</strong> Formas de romboedro podem ser utilizadas em esculturas e designs
+            arquitetônicos
+            para criar efeitos visuais interessantes e modernos. <br> <br>
+            <strong>Em Cálculos em Ciência e Tecnologia:</strong> O romboedro é empregado em cálculos relacionados a
+            volumes, como na
+            engenharia para determinar a capacidade de estruturas tridimensionais de formato romboédrico. <br> <br>
+        </p>
+
+
+
+
+
+
+
+        <h2>Não pare por ai, que tal experimentar novas formas?</h2>
+
+        <div class="caixaBotões">
+            <button><a href="Retangulo.html">Retangulo</a></button> <button><a href="Cubo.html">Cubo</a></button>
+
+            <button><a href="PolígonoRegular.html">Polígono Regular</a></button> <button><a
+                    href="TrapezoideIrregular.html">Trapezoide Irregular</a></button> <button><a
+                    href="Quadrado.html">Quadrado</a></button>
+            <button><a href="Cubóide.html">Cubóide</a></button> <button><a href="circulo.html">circulo</a></button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        // Exemplo de função em javascript chamada por um evento
+        document.getElementById('submit').addEventListener('click', function (event) {
+            event.preventDefault();
+            calcularAreaRetangulo();
+            calcularPerimetroRomboedro();
+        });
+
+        // Exemplo de função em javascript
+        function exemplo() {
+            alert("Essa função foi chamada pelo botão")
+        }
+
+        // Função para calcular a área do romboedro
+        function calcularAreaRetangulo() {
+            let DiametroMaior = document.getElementById('DiametroMaior').value;
+            let DiametroMenor = document.getElementById('DiametroMenor').value;
+            let Altura = document.getElementById('altura').value;
+            let area = ((DiametroMaior * DiametroMenor) / 2) * Altura;
+            document.getElementById('area').value = area;
+            document.getElementById('resultado').innerText = `A área do retângulo é ${area}`;
+        }
+        // Função para calcular o perimetro do romboedro
+        function calcularPerimetroRomboedro() {
+            let DiametroMaior = document.getElementById('DiametroMaior').value;
+            let DiametroMenor = document.getElementById('DiametroMenor').value;
+            let perimetro = 4 * (parseFloat(DiametroMaior) + parseFloat(DiametroMenor));
+            document.getElementById('perimetro').value = perimetro;
+            document.getElementById('resultado2').innerText = `O perímetro do romboedro é ${perimetro}`;
+        }
+        //Exemplo de evento em javascript disparado por pressionar a tecla ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                alert('Você pressionou a tecla ESC');
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.keyCode === 50) {
+                alert('Você pressionou a tecla 2');
+            }
+        });
+
+        //Exemplo de evento em javascript disparado por pressionar a tecla ENTER em um campo de texto
+        document.getElementById('base').addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                alert('Você pressionou a tecla ENTER no campo base');
+            }
+        });
+
+        // Exemplo de evento em javascript disparado por passar o mouse sobre um elemento
+        document.getElementById('base').addEventListener('mouseover', function () {
+            console.log('Você passou o mouse sobre o campo base');
+        });
+
+    </script>
+</body>
+
+</html>

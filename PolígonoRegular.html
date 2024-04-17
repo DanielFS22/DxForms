@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poligono regular</title>
+
+    <!-- Import bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/PoligonoRegular.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="https://kit.fontawesome.com/2267267924.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><img src="assets/img/DxForms.jpeg" alt="DxForms"></div>
+        <div class="box">
+            <button><a href="index.html">Pagina inicial</a></button>
+            <button><a href="Retangulo.html">Retangulo</a></button>
+            <button><a href="Cubóide.html">Cuboide</a></button>
+            <button><a href="Quadrado.html">Quadrado</a></button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Calculo de área e perímetro do Poligono regular</h3>
+                <form>
+                    <div class="caixa">
+                        <label for="lado">Comprimento do Lado:</label>
+                        <input type="number" name="lado" id="lado" class="form-control" required>
+                    </div>
+                    <div class="caixa">
+                        <label for="numLados">Número de Lados:</label>
+                        <input type="number" name="numLados" id="numLados" class="form-control" required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <button type="submit" id="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/img/poligonoRegular.jpg" alt="img">
+            </div>
+            <div class="caixa mt-2">
+                <h4>Resultado:</h4>
+                <label for="resultadoArea">Área:</label>
+                <input type="text" name="resultadoArea" id="resultadoArea" class="form-control" disabled>
+                <label for="resultadoPerimetro">Perímetro:</label>
+                <input type="text" name="resultadoPerimetro" id="resultadoPerimetro" class="form-control" disabled>
+            </div>
+        </div>
+    
+
+        <h2>Propriedades Básicas do Polígono Regular:</h2>
+
+
+        <p>
+            <strong>Lados:</strong> Um polígono regular possui todos os lados com comprimentos iguais e ângulos internos iguais. <br><br>
+           
+            <strong>Ângulos:</strong> Todos os ângulos internos de um polígono regular são iguais. Para um polígono com n lados, a medida
+            de cada ângulo interno é dada pela fórmula: Ângulo Interno = (n - 2) x 180 / n graus.<br><br>
+            
+            <strong> Diagonais: </strong>As diagonais de um polígono regular são segmentos de linha que conectam vértices não adjacentes.
+            O número de diagonais em um polígono regular pode ser calculado pela fórmula: Diagonais = n x (n - 3) / 2,
+            onde n é o número de lados.<br><br>
+            
+            <strong>Área: </strong>A área de um polígono regular pode ser calculada de diferentes maneiras, dependendo do tipo de
+            polígono. Para um polígono regular com lado 'a' e apótema 'ap', a fórmula da área é: Área = 1/2 x Perímetro
+            x Apótema, onde Perímetro = n x a (número de lados multiplicado pelo comprimento do lado) e Apótema é a
+            altura do polígono do centro até um dos lados.<br><br>
+           
+            <strong>Perímetro:</strong> O perímetro de um polígono regular é a soma dos comprimentos de todos os seus lados. Para um
+            polígono com n lados e lado 'a', o perímetro é dado pela fórmula: Perímetro = n x a.
+            Aplicações do Polígono Regular: Os polígonos regulares são frequentemente utilizados em geometria,
+            arquitetura, design gráfico e diversas áreas da ciência e engenharia. Eles são importantes para calcular
+            áreas de terrenos, volumes de sólidos, distribuição de cargas em estruturas, entre outras aplicações.<br><br>
+        </p>
+    </div>
+
+
+
+
+
+
+
+        <h2>Não pare por ai, que tal experimentar novas formas?</h2>
+
+        <div class="caixaBotões">
+            <button><a href="circulo.html">circulo</a></button> <button><a href="Cubo.html">Cubo</a></button> <button><a
+                    href="Romboedro.html">Romboedro</a></button>
+            <button><a href="Retangulo.html">Retangulo</a></button> <button><a
+                    href="TrapezoideIrregular.html">Trapezoide Irregular</a></button>
+            <button><a href="Quadrado.html">Quadrado</a></button> <button> <a href="Cubo.html">Cubóide</a></button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+        <script>
+            // Adicionar um ouvinte de evento para o botão de calcular quando o documento estiver totalmente carregado
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('submit').addEventListener('click', function (event) {
+                    event.preventDefault();
+                    calcularAreaPerimetro();
+                });
+            });
+        
+            function calcularAreaPerimetro() {
+                let lado = parseFloat(document.getElementById('lado').value);
+                let numLados = parseInt(document.getElementById('numLados').value);
+        
+                // Calcular a área de um polígono regular
+                let area = (numLados * lado ** 2) / (4 * Math.tan(Math.PI / numLados));
+        
+                // Calcular o perímetro de um polígono regular
+                let perimetro = numLados * lado;
+        
+                // Exibir os resultados nos campos de entrada desabilitados
+                document.getElementById('resultadoArea').value = area.toFixed(2);
+                document.getElementById('resultadoPerimetro').value = perimetro.toFixed(2);
+            }
+        </script>
+
+        <footer>
+        <div class="footer-container">
+            <div class="icones">
+                <a href="https://www.facebook.com/profile.php?id=100004967434824&locale=pt_BR"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://github.com/DanielFS22"><i class="fa-brands fa-github"></i></a>
+                <a href="https://discord.gg/shn8awQA"><i class="fa-brands fa-discord"></i></a>
+                <a href="https://www.instagram.com/_dannox/?next=%2F"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/daniel-fernandes-santos-9b9609205/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:dannox2002@gmail.comgmail.com"><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+
+        </div>
+
+        <div class="footerbottom">
+            <p>copyright &copy;;2024; Designed by <span class="design">Daniel Fernanades</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
